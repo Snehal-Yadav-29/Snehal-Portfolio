@@ -1,0 +1,17 @@
+{
+  "name": "Snehal Yadav Portfolio",
+  "short_name": "Snehal",
+  "start_url": "index.HTML",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "description": "Professional portfolio of Snehal Yadav - B.Tech AIML Student",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    } 
+  ]
+}
+
