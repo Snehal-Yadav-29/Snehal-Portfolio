@@ -1,7 +1,8 @@
 {
   "name": "Snehal Yadav Portfolio",
   "short_name": "Snehal",
-  "start_url": "index.HTML",
+  "start_url": "/Snehal-Portfolio/",
+  "scope": "/Snehal-Portfolio/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3b82f6",
@@ -14,4 +15,5 @@
     } 
   ]
 }
+
 
