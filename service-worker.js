@@ -1,17 +1,18 @@
-const CACHE_NAME = "snehal-portfolio-v1";
+const CACHE_NAME = "portfolio-cache-v1";
+const BASE_PATH = "/Snehal-Portfolio/";
 
-const FILES_TO_CACHE = [
-  "INDEX.HTML",
-  "manifest.json",
-  "icon.png"
-  
+const urlsToCache = [
+  BASE_PATH,
+  BASE_PATH + "index.html",
+  BASE_PATH + "manifest.json",
+  BASE_PATH + "icon.png"
 ];
 
 // Install event – cache files
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(FILES_TO_CACHE);
+      return cache.addAll(urlsToCache);
     })
   );
   self.skipWaiting();
@@ -33,7 +34,7 @@ self.addEventListener("activate", event => {
   self.clients.claim();
 });
 
-// Fetch event – serve offline content
+// Fetch event – serve cached content
 self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request).then(response => {
